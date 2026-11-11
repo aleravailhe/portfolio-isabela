@@ -1,0 +1,80 @@
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 16px 24px;
+  position: fixed;
+  inset: 0;
+  background-color: var(--accent);
+  z-index: 100;
+}
+
+.menuLink {
+  font-family: var(--display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--bg);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--bg);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.closeButton img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.menuHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuLinks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--text-red);
+  border-radius: 50%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brandName {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.375rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--text-black);
+}
