@@ -1,0 +1,44 @@
+.title {
+  font-family: var(--display);
+  font-size: clamp(56px, 9vw, 132px);
+  font-weight: 900;
+  font-variation-settings:
+    "wdth" 70,
+    "wght" 900;
+  line-height: 0.97;
+  letter-spacing: -0.01em;
+  max-width: 900px;
+  color: var(--text-white);
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.description {
+  font-family: var(--display);
+  font-size: 22px;
+  color: var(--muted);
+}
+
+.brandDescriptor {
+  display: block;
+  text-decoration: none;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .brandDescriptor {
+    display: none;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .descriptionContainer {
+    max-width: 340px;
+  }
+}

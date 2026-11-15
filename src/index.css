@@ -11,6 +11,13 @@ body {
   font-family: var(--display);
 }
 
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
 img,
 picture,
 video,
@@ -22,7 +29,7 @@ svg {
 
 :root {
   --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
-  --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --text-white: #fff;
   --text-black: #000;
   --text-red: #b60000;
@@ -34,4 +41,17 @@ svg {
   --accent: #ff5a36;
   --accent-hover: #fa6d4d;
   --line-strong: #3a3a37;
+  --max: 1280px;
+  --pad: 32px;
 }
+
+
+
+
+/* 
+MEDIA QUERIES 
+
+@media (min-width: 768px){
+}
+
+*/

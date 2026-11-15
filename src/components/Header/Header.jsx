@@ -6,7 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} wrap`}>
       <a href="#topo" className={styles.brand}>
         <span className={styles.dot} aria-hidden="true"></span>
         <span className={styles.brandName}>ISABELA</span>
@@ -31,20 +31,6 @@ function Header() {
         ☰
       </button>
       {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
-
-      {/* **********DEBUG********* */}
-      <p
-        style={{
-          position: "fixed",
-          bottom: 20,
-          left: "50%",
-          transform: "translateX(-50%)",
-          backgroundColor: "orange",
-          padding: "10px",
-        }}
-      >
-        Debug: {String(isMenuOpen)}
-      </p>
     </header>
   );
 }
