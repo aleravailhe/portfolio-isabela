@@ -10,7 +10,7 @@ function Header() {
       <a href="#topo" className={styles.brand}>
         <span className={styles.dot} aria-hidden="true"></span>
         <span className={styles.brandName}>ISABELA</span>
-        <span className={styles.brandDescriptor}>/ editora de vídeo</span>
+        <span className={styles.brandDescriptor}>/ audiovisual</span>
       </a>
       <nav className={styles.desktopNav}>
         <a href="#projetos">Projetos</a>
