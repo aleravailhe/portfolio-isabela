@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Header from "./components/Header/Header";
+import ShowreelModal from "./components/ShowreelModal/ShowreelModal";
 import Hero from "./components/Hero/Hero";
 import Marquee from "./components/Marquee/Marquee";
 import Projects from "./components/Projects/Projects";
@@ -7,17 +9,19 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
+  const [isShowreelOpen, setIsShowreelOpen] = useState(false);
   return (
     <>
-      <Header />
+      <Header onOpenShowreel={() => setIsShowreelOpen(true)} />
       <main>
-        <Hero />
+        <Hero onOpenShowreel={() => setIsShowreelOpen(true)} />
         <Marquee />
         <Projects />
         <About />
         <Contact />
       </main>
       <Footer />
+      {isShowreelOpen && <ShowreelModal onClose={() => setIsShowreelOpen(false)} />}
     </>
   );
 }
