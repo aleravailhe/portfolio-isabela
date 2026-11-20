@@ -1,12 +1,5 @@
-@import "tailwindcss/theme.css";
-@import "tailwindcss/utilities.css";
+@import "tailwindcss";
 
-/*
- * Tokens Tailwind v4.
- * Mantemos o Preflight desativado durante a migração para preservar
- * o layout que ainda usa CSS Modules. Quando a conversão terminar,
- * ativaremos o reset do Tailwind e validaremos os estilos.
- */
 @theme inline {
   --color-page: var(--bg);
   --color-surface: var(--surface);
@@ -21,61 +14,31 @@
   --font-mono: var(--mono);
 }
 
-/* Reset global */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background-color: var(--bg);
-  font-family: var(--display);
-}
-
-.wrap {
-  width: 100%;
-  max-width: var(--max);
-  margin-inline: auto;
-  padding-inline: var(--pad);
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 :root {
-  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
-  --body: "Inter", system-ui, sans-serif;
-  --text-white: #fff;
-  --text-black: #000;
-  --text-red: #b60000;
   --bg: #0d0d0c;
   --surface: #171716;
   --line: #2a2a28;
+  --line-strong: #3a3a37;
   --text: #f2f0eb;
   --muted: #a3a19a;
   --accent: #ff5a36;
   --accent-hover: #fa6d4d;
-  --line-strong: #3a3a37;
+  --text-white: #fff;
+  --text-black: #000;
+  --text-red: #b60000;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --max: 1280px;
   --pad: 32px;
+  --radius: 16px;
 }
-
-
-
-
-/* 
-MEDIA QUERIES 
-
-@media (min-width: 768px){
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+@media (max-width: 767px) { :root { --pad: 20px; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
-
-*/
