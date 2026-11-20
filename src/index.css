@@ -33,6 +33,7 @@
   --pad: 32px;
   --radius: 16px;
 }
+@keyframes marquee { to { transform: translateX(-50%); } }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); -webkit-font-smoothing: antialiased; }
 button { cursor: pointer; }
