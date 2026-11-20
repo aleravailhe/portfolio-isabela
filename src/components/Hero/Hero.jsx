@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./Hero.module.css";
 import ShowreelModal from "../ShowreelModal/ShowreelModal";
 
 function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const triggerButtonRef = useRef(null);
 
   return (
     <section className={`wrap ${styles.hero}`}>

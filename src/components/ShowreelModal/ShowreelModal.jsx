@@ -1,9 +1,15 @@
 import styles from "./ShowreelModal.module.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+const showreelVideoId = "";
 
 function ShowreelModal({ onClose }) {
+  const closeButtonRef = useRef(null);
+  
   useEffect(() => {
     function handleKeyDown(event) {
+      closeButtonRef.current?.focus();
+
       if (event.key === "Escape") {
         onClose();
       }
@@ -32,15 +38,22 @@ function ShowreelModal({ onClose }) {
         aria-label="Showreel"
       >
         <div className={styles.videoPlayerContainer}>
-          <iframe
-            src="https://www.youtube.com/embed/ID_DO_VIDEO"
-            title="Showreel Isabela"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
+          {showreelVideoId ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${showreelVideoId}`}
+              title="Showreel da Isabela"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          ) : (
+            <span className={styles.noVideoText}>
+              [SHOWREEL COM SOM — player em tela cheia]
+            </span>
+          )}
         </div>
         <button
+          ref={closeButtonRef}
           type="button"
           aria-label="Fechar showreel"
           className={styles.closeModal}

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./Header.module.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const triggerButtonRef = useRef(null);
 
   return (
     <header className={`${styles.header} wrap`}>
