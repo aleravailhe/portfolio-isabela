@@ -3,7 +3,7 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 
 const navLink = "text-[15px] text-muted no-underline transition-colors hover:text-ink focus-visible:text-ink";
 
-function Header() {
+function Header({ onOpenShowreel }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuButtonRef = useRef(null);
@@ -37,7 +37,7 @@ function Header() {
           </button>
         </div>
       </header>
-      <MobileMenu open={isMenuOpen} onClose={() => setIsMenuOpen(false)} returnFocusRef={menuButtonRef} />
+      <MobileMenu open={isMenuOpen} onClose={() => setIsMenuOpen(false)} returnFocusRef={menuButtonRef} onOpenShowreel={onOpenShowreel} />
     </>
   );
 }
