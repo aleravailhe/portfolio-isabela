@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 const links = [["Projetos", "#projetos", "01"], ["Sobre", "#sobre", "02"], ["Contato", "#contato", "03"]];
 
-function MobileMenu({ open, onClose, returnFocusRef }) {
+function MobileMenu({ open, onClose, returnFocusRef, onOpenShowreel }) {
   const closeButtonRef = useRef(null);
   const panelRef = useRef(null);
   const closeRef = useRef(onClose);
@@ -51,7 +51,7 @@ function MobileMenu({ open, onClose, returnFocusRef }) {
         ))}
       </nav>
       <div className="flex flex-col gap-4 px-5 pb-9">
-        <a href="#topo" onClick={onClose} className="flex min-h-14 items-center justify-center rounded-full bg-page font-semibold text-ink">Ver showreel</a>
+        <button type="button" onClick={() => { onClose(); onOpenShowreel(); }} className="flex min-h-14 items-center justify-center rounded-full bg-page font-semibold text-ink">Assistir showreel</button>
         <p className="text-center text-sm">Portfólio audiovisual · São Paulo</p>
       </div>
     </div>
