@@ -1,3 +1,26 @@
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+
+/*
+ * Tokens Tailwind v4.
+ * Mantemos o Preflight desativado durante a migração para preservar
+ * o layout que ainda usa CSS Modules. Quando a conversão terminar,
+ * ativaremos o reset do Tailwind e validaremos os estilos.
+ */
+@theme inline {
+  --color-page: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --font-display: var(--display);
+  --font-body: var(--body);
+  --font-mono: var(--mono);
+}
+
 /* Reset global */
 *,
 *::before,
@@ -30,6 +53,7 @@ svg {
 :root {
   --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --body: "Inter", system-ui, sans-serif;
   --text-white: #fff;
   --text-black: #000;
   --text-red: #b60000;
